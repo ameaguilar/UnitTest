@@ -24,3 +24,16 @@ test("el descuento del 120% de 300 es 360" ,()=>{
     expect(funciones.calcularDescuento(300, 120)).toBe(-60);
 });  
 
+// Thrutiness - buscar valores null, undefined, true o false
+
+test("La contraseña parangaricutirimicuaro10 tiene formato válido", () => {
+    expect(funciones.validarPassword("parangaricutirimicuaro10")).toBeTruthy();
+});
+
+test("La contraseña 12345678 tiene formato válido", () => {
+    expect(funciones.validarPassword("12345678")).toBeTruthy();
+});
+
+test("La contraseña pepinillos tiene formato válido", () => {
+    expect(funciones.validarPassword("pepinillos")).toBeFalsy();
+});

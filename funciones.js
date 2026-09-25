@@ -38,11 +38,6 @@ function validarPassword(password) {
     return true;
 }
 
-console.log(validarPassword("pepinillos"));
-console.log(validarPassword("terrenicola2009"));
-console.log(validarPassword("Cuadrupedus2"));
-
-
-
 
 module.exports.calcularDescuento = calcularDescuento;
+module.exports.validarPassword = validarPassword;
