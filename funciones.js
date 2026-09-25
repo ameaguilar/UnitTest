@@ -6,23 +6,43 @@
 
 
 
-function calcularDescuento(cantidad) {
-    const porcentajeDescuento = 0.10;
-    let descuento = cantidad * porcentajeDescuento;
+function calcularDescuento(cantidad, porcentaje) {
+
+    let descuento = cantidad * porcentaje/100;
     let total = cantidad - descuento;
 
-    if (total < 0 || total > 100) {
-        console.log("Cantidad inválida");
-        return total;    
-    }
+    if (porcentaje < 0 || porcentaje > 100) {
+        console.log("Cantidad inválida");  
 
-    return total;
+    } 
+        return total;
 }
 
 
+
+
 /** FUNCION 2
- * 
+ * Validación de contraseña, debe contener:
+ * 8 carácteres mínimo
+ * al menos 1 número
+ * devolver true si devuelve las condiciones, false en otro caso
  */
+
+function validarPassword(password) {
+    const regex = new RegExp("^(?=.*\\d).{8,}$");
+
+    if (!regex.test(password)) {
+        return false;
+    } // if
+
+    return true;
+}
+
+console.log(validarPassword("pepinillos"));
+console.log(validarPassword("terrenicola2009"));
+console.log(validarPassword("Cuadrupedus2"));
+
+
 
 
 module.exports.calcularDescuento = calcularDescuento;
