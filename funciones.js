@@ -39,5 +39,26 @@ function validarPassword(password) {
 }
 
 
+/** FUNCION 3 
+ * Conversor de Temperatura:
+ * 
+ */
+
+function celsiusFahrenheit (celsius) {
+    let f = (celsius * 9/5 ) + 32;
+    return f;
+}
+
+
+/** FUNCION 4
+ *  Verificación de mayoría de edad
+ */
+
+function esMayorDeEdad (edad) {
+   return edad >= 18;
+}
+
+
 module.exports.calcularDescuento = calcularDescuento;
 module.exports.validarPassword = validarPassword;
+module.exports.celsiusFahrenheit = celsiusFahrenheit;
